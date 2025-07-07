@@ -3,11 +3,13 @@
 /**
  * Handles category-related actions
  */
-class CategoryController {
+class CategoryController
+{
     /**
      * Display list of all categories
      */
-    public function index() {
+    public function index()
+    {
         require_once __DIR__ . '/../models/Category.php';
         $model = new Category();
         $categories = $model->getAll();
@@ -18,14 +20,16 @@ class CategoryController {
     /**
      * Show the create form
      */
-    public function create() {
+    public function create()
+    {
         require_once __DIR__ . '/../views/categories/create.php';
     }
 
     /**
      * Save new category
      */
-    public function store() {
+    public function store()
+    {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = $_POST['name'] ?? '';
 
@@ -41,7 +45,8 @@ class CategoryController {
     /**
      * Show the edit form
      */
-    public function edit() {
+    public function edit()
+    {
         if (isset($_GET['id'])) {
             require_once __DIR__ . '/../models/Category.php';
             $model = new Category();
@@ -54,7 +59,8 @@ class CategoryController {
     /**
      * Update category
      */
-    public function update() {
+    public function update()
+    {
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['id'])) {
             $id = $_GET['id'];
             $name = $_POST['name'] ?? '';
@@ -62,20 +68,6 @@ class CategoryController {
             require_once __DIR__ . '/../models/Category.php';
             $model = new Category();
             $model->update($id, ['name' => $name]);
-
-            header('Location: index.php?controller=category&action=index');
-            exit;
-        }
-    }
-
-    /**
-     * Delete category
-     */
-    public function delete() {
-        if (isset($_GET['id'])) {
-            require_once __DIR__ . '/../models/Category.php';
-            $model = new Category();
-            $model->delete($_GET['id']);
 
             header('Location: index.php?controller=category&action=index');
             exit;

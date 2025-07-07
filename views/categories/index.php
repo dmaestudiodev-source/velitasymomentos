@@ -20,7 +20,6 @@
                     <td><?= htmlspecialchars($category['name']) ?></td>
                     <td>
                         <a href="index.php?controller=category&action=edit&id=<?= $category['id'] ?>" class="btn btn-outline-secondary">Editar</a>
-                        <a href="index.php?controller=category&action=delete&id=<?= $category['id'] ?>" class="btn btn-outline-secondary" onclick="return confirm('Are you sure?')">Eliminar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
