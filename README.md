@@ -97,15 +97,6 @@ This is the UML class diagram for the **Velitas y Momentos** project, illustrati
 
 ---
 
-## 🔐 Default Access
-
-| Role       | User                  | Password  |
-|------------|-----------------------|-----------|
-| Admin      | admin@velitas.com     | admin123  |
-| Client     | cliente@velitas.com   | cliente123|
-
----
-
 ## ⚙️ Admin Features
 
 - Dashboard with user list

@@ -118,9 +118,7 @@ switch ($action) {
             $categoryController->update();
         }
         break;
-    case 'category_delete':
-        $categoryController->delete();
-        break;
+
 
     // ===========================
     // User authentication
