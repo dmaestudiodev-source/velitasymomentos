@@ -117,8 +117,8 @@ From the admin panel, export all orders in a `.xlsx` file using PhpSpreadsheet.
 
 ## 👩‍💻 Author & Credits
 
-Developed by Diana Alfonso
-Organization: dmastudiodev-source
+- Developed by Diana Alfonso
+- Organization: dmastudiodev-source
 
 ---
 
