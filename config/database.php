@@ -2,10 +2,11 @@
 // config/database.php
 // Returns a PDO connection instance for use with Delight Auth and the app
 
-$host = 'localhost';
-$dbname = 'vym';
+$host = 'db';
+$dbname = 'velitasymomentos';
 $username = 'root';
 $password = '';
+
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);

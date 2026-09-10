@@ -1,0 +1,15 @@
+# Variables de entorno y credenciales sensibles
+.env
+.env.local
+config/database.local.php
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Carpetas de dependencias o logs
+/vendor/
+storage/logs/*
+*.log
