@@ -11,13 +11,10 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install pdo pdo_mysql fileinfo gd zip
 
-# Eliminar módulos MPM en conflicto y activar mpm_prefork + rewrite
-RUN rm -f /etc/apache2/mods-enabled/mpm_event.* \
-    && rm -f /etc/apache2/mods-enabled/mpm_worker.* \
+# Forzar la eliminación de mpm_event y activar mpm_prefork + rewrite
+RUN rm -f /etc/apache2/mods-enabled/mpm_event.load \
+    && rm -f /etc/apache2/mods-enabled/mpm_event.conf \
     && a2enmod mpm_prefork rewrite
-
-# Configurar Apache para que escuche en el puerto dinámico de Railway ($PORT)
-RUN sed -i 's/80/${PORT}/g' /etc/apache2/ports.conf /etc/apache2/sites-available/*.conf
 
 # Copiar el código del proyecto al contenedor
 COPY . /var/www/html/
