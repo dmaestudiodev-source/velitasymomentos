@@ -1,31 +1,29 @@
-# Velitas y Momentos
+# 🕯️ Velitas y Momentos
 
-**Velitas y Momentos** is an artisanal virtual shop for selling personalized candles, candle bouquets and esoteric candles. 
-Developed as a final project for the fullstack web development course, it features a complete MVC system with PHP, MySQL, Bootstrap and PhpSpreadsheet.
+![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-MVC-green?style=for-the-badge)
+
+**Velitas y Momentos** is an artisanal virtual shop for selling personalized candles, candle bouquets, and esoteric candles. 
+Developed as a fullstack web project, it features a complete MVC system built with PHP, MySQL, Bootstrap, PHPMailer, and PhpSpreadsheet.
 
 ## ✨ Main Features
+- 🎨 Public product catalog with dynamic images and categories.
+- 🛒 Shopping cart management for registered users.
+- 👤 Authentication system with role-based access control (Admin / Client / Visitor).
+- 📝 Complete Admin CRUD panel for products, categories, and users.
+- 📈 Order export functionality to Excel using **PhpSpreadsheet**.
+- 💌 Interactive contact form with automated email dispatch via **PHPMailer**.
+- 📱 Fully responsive design powered by Bootstrap 5 and SweetAlert2.
 
-- 🎨 Public product catalog with images and categories.
-- 🛒 Shopping cart for registered users.
-- 👤 Registration and login with customer and admin roles.
-- 🔐 Role-based access control (admin / client / visitor).
-- 📝 Admin CRUD for products and categories.
-- 📈 Order export to Excel (PhpSpreadsheet).
-- 💌 Contact form with email sending (PHPMailer).
-- 🧙‍♀️ Esoteric and personalized candles for all events.
-- 📱 Responsive design with Bootstrap.
+## 🏗️ Tech Stack
 
----
-
-## 🏗️ Technologies Used
-
-- **Frontend:** HTML5, CSS3 (Bootstrap 5), JavaScript, SweetAlert2
-- **Backend:** PHP 8 with pure MVC pattern
-- **Database:** MySQL
-- **External dependencies:**
-  - PHPMailer for email sending
-  - PhpSpreadsheet for Excel export
-- **Local server:** Laragon
+- **Frontend:** HTML5, CSS3, Bootstrap 5, JavaScript, SweetAlert2.
+- **Backend:** PHP 8 (Pure MVC pattern, OOP).
+- **Database:** MySQL.
+- **Dependencies & Tools:** Composer, PHPMailer, PhpSpreadsheet.
+- **Environment:** Laragon / Docker Support.
 
 ---
 
@@ -53,32 +51,23 @@ This is the use case diagram for the **Velitas y Momentos** project, showing the
 
 ![Use Case Diagram](docs/case.png)
 
-
----
-## 📝 UML Class Diagram
-
-This is the UML class diagram for the **Velitas y Momentos** project, illustrating the classes with their attributes and methods.
-
-![Class Diagram](docs/class.png)
-
-
-
 ---
 
 ## 🚀 Local Installation
 
 1. Clone this repository
    ```bash
-   git clone https://github.com/your-user/velitasymomentos.git
+   git clone https://github.com/dmaestudiodev-source/velitasymomentos.git
    ```
+   
 2. Copy the project to your Laragon directory (e.g. `C:\laragon\www\velitasymomentos`).
 
-3. Create the MySQL database:
+3. Create the MySQL database and import the schema.sql:
    ```sql
    CREATE DATABASE velitasymomentos CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
    ```
 
-4. Import the tables with the script `velitasymomentos.sql` (includes users, products, orders, etc).
+4. Import the tables with the script `schema.sql` (includes users, products, orders, etc).
 
 5. Configure `config/database.php` with your local credentials:
    ```php
@@ -128,7 +117,8 @@ From the admin panel, export all orders in a `.xlsx` file using PhpSpreadsheet.
 
 ## 👩‍💻 Author & Credits
 
-Project developed by **Diana Alfonso** as the final project for her fullstack web development course, integrating PHP, MySQL, Bootstrap, PHPMailer, and PhpSpreadsheet.
+Developed by Diana Alfonso
+Organization: dmastudiodev-source
 
 ---
 
@@ -144,6 +134,6 @@ Future plans:
 
 ## 📜 License
 
-This project is for educational and personal use under your preferred terms.
+Educational and professional portfolio project. All rights reserved.
 
 ---
