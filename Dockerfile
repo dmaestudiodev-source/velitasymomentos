@@ -16,6 +16,9 @@ RUN rm -f /etc/apache2/mods-enabled/mpm_event.load \
     && rm -f /etc/apache2/mods-enabled/mpm_event.conf \
     && a2enmod mpm_prefork rewrite
 
+# Configurar Apache para que escuche en el puerto dinámico de Railway ($PORT o 80)
+RUN sed -i 's/80/${PORT}/g' /etc/apache2/ports.conf /etc/apache2/sites-available/*.conf
+
 # Copiar el código del proyecto al contenedor
 COPY . /var/www/html/
 
@@ -25,4 +28,3 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/conf-available/*.conf
 
 WORKDIR /var/www/html
-# Comentario para forzar despliegue limpio
