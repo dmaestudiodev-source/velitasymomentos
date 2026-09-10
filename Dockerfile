@@ -11,8 +11,10 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install pdo pdo_mysql fileinfo gd zip
 
-# Habilitar mod_rewrite y corregir modulos MPM de Apache
-RUN a2dismod mpm_event && a2enmod mpm_prefork rewrite
+# Forzar la eliminación de mpm_event y activar mpm_prefork + rewrite
+RUN rm -f /etc/apache2/mods-enabled/mpm_event.load \
+    && rm -f /etc/apache2/mods-enabled/mpm_event.conf \
+    && a2enmod mpm_prefork rewrite
 
 # Copiar el código del proyecto al contenedor
 COPY . /var/www/html/
