@@ -2,7 +2,7 @@
 // config/database.php
 // Returns a PDO connection instance for use with Delight Auth and the app
 
-$host     = $_ENV['DB_HOST']     ?? getenv('DB_HOST')     ?? '127.0.0.1';
+$host     = $_ENV['DB_HOST']     ?? getenv('DB_HOST')     ?? 'db';
 $dbname   = $_ENV['DB_NAME']     ?? getenv('DB_NAME')     ?? 'velitasymomentos';
 $username = $_ENV['DB_USER']     ?? getenv('DB_USER')     ?? 'root';
 $password = $_ENV['DB_PASSWORD'] ?? getenv('DB_PASSWORD') ?? '';

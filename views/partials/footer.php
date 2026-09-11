@@ -40,7 +40,7 @@
 
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<a href="https://wa.me/573242352551" target="_blank"
+<a href="https://wa.me/573242372551" target="_blank"
    class="btn btn-success"
    style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
     <i class="bi bi-whatsapp" style="font-size: 1.8rem;"></i>
