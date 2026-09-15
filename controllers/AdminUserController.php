@@ -69,9 +69,10 @@ class AdminUserController
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $username = $_POST['username'] ?? null;
             $roles_mask = $_POST['roles_mask'] ?? 1;
+            $registered = time(); // Genera el timestamp actual de UNIX
 
-            $stmt = $pdo->prepare("INSERT INTO users (email, password, username, roles_mask) VALUES (?, ?, ?, ?)");
-            $stmt->execute([$email, $password, $username, $roles_mask]);
+            $stmt = $pdo->prepare("INSERT INTO users (email, password, username, roles_mask, registered) VALUES (?, ?, ?, ?, ?)");
+            $stmt->execute([$email, $password, $username, $roles_mask, $registered]);
 
             $_SESSION['create_success'] = true;
             header('Location: index.php?action=admin_users');

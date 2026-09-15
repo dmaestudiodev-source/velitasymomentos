@@ -14,13 +14,13 @@ class EmailService {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';    // o el servidor SMTP que uses
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'velitasymomentos@gmail.com';  // tu correo
-            $mail->Password   = 'gvhi wart bqfo vkks';      // tu contraseña de aplicación
+            $mail->Username   = 'dmaestudiodev@gmail.com';  // tu correo
+            $mail->Password   = 'xymq sswr uarj hmah';      // tu contraseña de aplicación
             $mail->SMTPSecure = 'tls';                  // o 'ssl'
             $mail->Port       = 587;                    // 465 para SSL
 
             // Remitente y destinatario
-            $mail->setFrom('velitasymomentos@gmail.com', 'Velitas y Momentos');
+            $mail->setFrom('dmaestudiodev@gmail.com', 'Velitas y Momentos');
             $mail->addAddress($toEmail);
 
             // Contenido del correo
